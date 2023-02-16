@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GST Maze</title>
+    <title>GST Awareness WebGame</title>
     <style>
-      #maze-canvas {
-        border: 1px solid black;
+      .maze {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        background-color: #eee;
+      }
+      .square {
+        position: absolute;
+        background-color: #333;
+        width: 50px;
+        height: 50px;
+      }
+      .player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url('player.png');
+        background-size: cover;
       }
     </style>
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>GST Maze</h1>
-    <canvas id="maze-canvas" width="600" height="400"></canvas>
-    <div id="instructions">
-      <p>Help the business owner navigate through the maze of GST regulations and file their taxes on time.</p>
-      <button id="start-btn">Start</button>
+    <h1>GST Awareness WebGame</h1>
+    <h2>Add a PNG image of your choice</h2>
+    <label for="player-image">Choose player image:</label>
+    <input type="file" id="player-image">
+    <div class="maze">
+      <div class="square" style="top: 0; left: 100px;"></div>
+      <div class="square" style="top: 50px; left: 100px;"></div>
+      <div class="square" style="top: 100px; left: 100px;"></div>
+      <div class="square" style="top: 150px; left: 100px;"></div>
+      <div class="square" style="top: 200px; left: 100px;"></div>
+      <div class="square" style="top: 250px; left: 100px;"></div>
+      <div class="square" style="top: 200px; left: 150px;"></div>
+      <div class="square" style="top: 150px; left: 200px;"></div>
+      <div class="square" style="top: 200px; left: 200px;"></div>
+      <div class="player"></div>
     </div>
     <script src="game.js"></script>
   </body>
